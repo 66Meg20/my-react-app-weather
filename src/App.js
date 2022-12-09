@@ -14,6 +14,8 @@ function App() {
         <a
           href="https://github.com/66Meg20/my-react-app-weather"
           target="_blank"
+          without
+          rel="noreferrer"
         >
           GitHub
         </a>
