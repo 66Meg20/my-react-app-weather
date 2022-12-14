@@ -25,3 +25,7 @@
 .projectLink {
   text-align: center;
 }
+.WeatherForecast img {
+  float: none;
+  width: 46px;
+}
