@@ -1,4 +1,4 @@
-.WeatherForecast img {
+.WeatherForecast .WeatherForecast-icon {
   float: none;
   width: 46px;
 }
