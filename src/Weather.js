@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import WeatherForecast from "./WeatherForecast.js";
 import WeatherInfo from "./WeatherInfo.js";
+import ReactLoader from "./ReactLoader.js";
 import axios from "axios";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       coordinates: response.data.coordinates,
@@ -45,7 +45,7 @@ export default function Weather(props) {
               />
             </div>
             <div className="col-3">
-              <input type="submit" value="search" className="btn btn-primary" />
+              <input type="submit" value="Search" className="btn btn-primary" />
             </div>
           </div>
         </form>
@@ -58,6 +58,10 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "loading...";
+    return (
+      <div className="loader">
+        <ReactLoader type="spinningBubbles" color="blue" />
+      </div>
+    );
   }
 }
